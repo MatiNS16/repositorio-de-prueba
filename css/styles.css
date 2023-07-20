@@ -1,0 +1,40 @@
+body{
+    background-color: yellow;  /*esto nos permite cambiar el fondo de la página */
+    color: black; /* esto nos permite cambiar el color de la fuente */
+}
+h1{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 36px;
+    background-color: black;
+    color: lightblue;
+    text-align: center; /* Esto nos permite alinear el texto */
+}
+p{
+    font-family: 'Times New Roman', Times, serif; /* Esto nos permite definir la fuente de cáracteres */
+    font-size: 18px; /* Esto nos permite definir el tamaño de la fuente */
+    padding: 10px; /* Se utiliza para establecer el espacio entre el contenido de un elemento y su borde */
+    margin: 20px; /* Se utiliza para establecer el espacio entre el borde de un elemento y cualquier elemento adyacente */
+}
+.container {
+    max-width: 800px; /* Se aplica cuando la anchura de la pantalla es menor o igual a un valor específico*/
+  margin: auto;
+  padding: 20px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap; /*  Los elementos flexibles se ajustan en varias líneas según sea necesario. */
+    margin: 10px;
+  }
+  
+  .column {
+    flex: 1; /* Convierte un elemento en un contenedor flexible, lo que permite control el tamaño y la posición de sus elementos hijos. */
+    padding: 10px;
+  }
+/* Este código aplicará el nuevo estilo a la clase “.column” cuando el ancho de la pantalla
+ sea de 600 píxeles o menos, haciendo que las columnas se apilen verticalmente. */
+  @media (max-width: 600px) { 
+    .column {
+      flex: 100%;
+    }
+  }
